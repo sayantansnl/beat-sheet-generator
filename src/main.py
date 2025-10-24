@@ -41,8 +41,34 @@ def choose_structure():
     slow_print("\nStructure not found. Please check your spelling, or the list again. Use './main.sh' in the command line again.\n")
     return None
 
+def fill_in_the_beats(structure):
+    title = input("\nEnter the title of your movie: ")
+    name = structure["name"]
+    beats = {}
+    for beat in structure["beats"]:
+        beats[beat[0]] = input(f"{beat[0]} -- \n")
+    slow_print("\nAnalyzing the beats...\n")
+    option = input("\nFinalize the story beats? y/n\n")
+    if option == "y" or option == "Y":
+        slow_print("\n===== Finalizing the beats =====\n")
+        time.sleep(0.5)
+        slow_print(f'\nStructure Chosen: {name} for {title}\n')
+        slow_print("\nDisplaying the beats:\n")
+        for key in beats.keys():
+            slow_print(f"{key} -- {beats[key]}\n")
+        return {
+            "title": title,
+            "structure_name": name,
+            "beats": beats
+        }
+    elif option == "n" or option == "N":
+        return fill_in_the_beats(structure)
+
+
 def main():
     structure = choose_structure()
+    slow_print(f"\nBased on \"{structure["name"]}\", fill in the following beats: \n")
+    blueprint = fill_in_the_beats(structure)
     
 
 main()
