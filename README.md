@@ -12,10 +12,6 @@ A lightweight vanilla Python tool that helps screenwriters structure their stori
 - 🧾 Export your outline as a **formatted txt**.
 
 ## 🛠 How to Use
-## Motivation
-## Quick Start
-## Usage
-## Contributing
 
 1. **Clone or download the repository.** ```git clone <repo-url>``` ```cd beat_sheet_generator```
 2. **Run the main shell file.** ```./main.sh```
