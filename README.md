@@ -13,7 +13,7 @@ A lightweight vanilla Python tool that helps screenwriters structure their stori
 
 ## 🛠 How to Use
 ## Motivation
-## Quickstart
+## Quick Start
 ## Usage
 ## Contributing
 
